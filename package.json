@@ -1,0 +1,84 @@
+{
+  "name": "vscode-ai-coding-assistant-ui",
+  "displayName": "AI Coding Assistant UI",
+  "description": "VS Code extension implementing multiple AI coding assistant UI conditions for a user study on developer behavior.",
+  "version": "1.2.0",
+  "publisher": "anonymousss",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.61.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "ai",
+    "coding-assistant",
+    "user-study",
+    "code-generation",
+    "python"
+  ],
+  "activationEvents": [
+    "onView:aiCodingAssistant.chatView"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ai-coding-assistant",
+          "title": "AI Coding Assistant",
+          "icon": "assets/chat.png"
+        }
+      ]
+    },
+    "views": {
+      "ai-coding-assistant": [
+        {
+          "type": "webview",
+          "id": "aiCodingAssistant.chatView",
+          "name": "Chat",
+          "contextualTitle": "AI Coding Assistant"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "aiCodingAssistant.clearChat",
+        "title": "Clear Chat History",
+        "icon": "$(clear-all)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "aiCodingAssistant.clearChat",
+          "group": "navigation",
+          "when": "view == aiCodingAssistant.chatView"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.61.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "@vscode/test-electron": "^1.6.2",
+    "eslint": "^7.32.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.1",
+    "typescript": "^4.4.3"
+  }
+}
