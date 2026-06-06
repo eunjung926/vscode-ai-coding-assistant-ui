@@ -35,10 +35,10 @@ const STUDY_MODES = {
   },
 };
 
-const API_BASE_URL = "https://seclab-autocoding.study.ngrok-free.app";
+const API_BASE_URL = "http://localhost:5059";
 
 const TASK_PREFIX =
-  "# User study task #Encrypt the user resident registration numbers # Write your program requirements:\n";
+  "# User study task #Encrypt sensitive user data # Write your program requirements:\n";
 
 const SECURITY_WARNING_TEXT =
   "⚠️ 이 코드는 공개된 오픈소스 코드 데이터셋을 기반으로 생성되었으며, 코드의 보안을 보장하지 않습니다.";

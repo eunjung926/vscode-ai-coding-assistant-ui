@@ -62,8 +62,7 @@ VS Code에서 `F5`를 누르면 Extension Development Host가 실행됩니다.
 
 ## 관련 저장소
 
-- **모델 학습** — 파인튜닝 스크립트 및 adapter 가중치 (별도 저장소)
-- **API 서버** — 코드 생성용 FastAPI 백엔드 (별도 저장소)
+- [ai-coding-assistant-api](../ai-coding-assistant-api) — FastAPI 백엔드 + PEFT LoRA 학습 코드
 
 ## 스크린샷
 
