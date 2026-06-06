@@ -67,6 +67,7 @@ VS Code에서 `F5`를 누르면 Extension Development Host가 실행됩니다.
 
 ## 스크린샷
 
-| 메인 채팅 | 보안 하이라이트 | 스켈레톤 코드 |
-|-----------|----------------|--------------|
-| ![Main](main_example.png) | ![Highlight](highlight_example.png) | ![Skeleton](skeleton_example.png) |
+| 환경 | 예제 |
+|------|------|
+| 메인 화면 | <img src="example/example1.png" width="700" alt="메인 화면"> |
+| 실행 화면 | <img src="example/example2.png" width="700" alt="실행 화면"> |
